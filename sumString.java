@@ -30,7 +30,7 @@ public class sumString {
 
     public boolean checkNext(int a, int b, int index, String str) {
         if (index == str.length()) return true;
-        String a3 = a + b + ""; //convert back to
+        String a3 = a + b + ""; //convert to string to get number of digit
         if (index + a3.length() > str.length()) return false;
         String check = str.substring(index, index + a3.length());
         if (a3.equals(check)) {
