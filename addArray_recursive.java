@@ -9,7 +9,6 @@ public class addArray_recursive {
     * 1 -> 4 - > 7   is 741
     * 3711
     * */
-
     public ListNode addArray(ListNode l1, ListNode l2) {
         return helper(l1,l2,0);
     }
@@ -36,6 +35,5 @@ public class addArray_recursive {
         ListNode next = helper( tmpN1, tmpN2, add);
         root.next = next;
         return root;
-
     }
 }

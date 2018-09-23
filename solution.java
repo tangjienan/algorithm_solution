@@ -3,7 +3,7 @@
  */
 public class solution {
     public static void main(String[] args) {
-        test t1 = new test();
-        System.out.println(t1.nqueens(2));
+        myComparator m = new myComparator();
+        m.solution();
     }
 }
