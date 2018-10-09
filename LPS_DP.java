@@ -4,6 +4,10 @@
 public class LPS_DP {
     /*
     * dp solution for longest palindromic substring
+    *
+    *
+    *   abcdfde abba kjuio
+    *
     * */
     public String LPS_DP(String str) {
         boolean[][] dp = new boolean[str.length()][str.length()];

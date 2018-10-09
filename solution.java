@@ -1,3 +1,5 @@
+import org.omg.Messaging.SYNC_WITH_TRANSPORT;
+
 import java.util.Arrays;
 
 /**
@@ -5,12 +7,11 @@ import java.util.Arrays;
  */
 public class solution {
     public static void main(String[] args) {
-        int[] arr = {6,5,4,3,2,1};
-        myHeap mh = new myHeap(arr);
-        mh.offer(-20);
-        mh.poll();
-        mh.poll();
-        mh.offer(-20);
-        System.out.println(Arrays.toString(mh.arr));
+        myMap map = new myMap();
+        System.out.println("DSADASd");
+        map.put("test", "test");
+        System.out.println(map.get("test"));
+        map.remove("test");
+        System.out.println(map.get("test"));
     }
 }
