@@ -4,14 +4,24 @@ import java.util.Arrays;
 
 /**
  * Created by donezio on 9/14/18.
+ *
+ *
+ *
+ *
  */
 public class solution {
     public static void main(String[] args) {
-        myMap map = new myMap();
-        System.out.println("DSADASd");
-        map.put("test", "test");
-        System.out.println(map.get("test"));
-        map.remove("test");
-        System.out.println(map.get("test"));
+
+        /*
+                        3
+                     2     5
+                  0      4
+                    1
+         */
+
+        TreeNode root = TreeNode.exampleTree();
+        interative_tree_traversal.postOrder(root);
+
+
     }
 }
