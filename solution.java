@@ -1,6 +1,7 @@
 import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by donezio on 9/14/18.
@@ -19,9 +20,10 @@ public class solution {
                     1
          */
 
-        TreeNode root = TreeNode.exampleTree();
-        interative_tree_traversal.postOrder(root);
+//        TreeNode root = TreeNode.exampleTree();
+//        interative_tree_traversal.postOrder(root);
 
-
+        int[] arr = {2,3,2,1,3,1};
+        SwapSwap.SwapSwapSol2(arr);
     }
 }
