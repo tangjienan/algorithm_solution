@@ -8,12 +8,19 @@ public class KLargest {
     *
     *  */
 
-    public int Klargest(int[] arr, int K) {
+
+    // 9 8 7 6 5 4 3 2 1
+    //   5 7 6
+
+    public static int Klargest(int[] arr, int K) {
         int p = helper( 0, arr.length - 1, arr, K);
         return arr[p];
     }
 
-    public int helper(int start, int end, int[] arr, int target) {
+
+    // pick a pivot, sort array into 2 parts,
+    // count pivot's position, go left or go right according to the index
+    public static int helper(int start, int end, int[] arr, int target) {
         int idx = getIndex(start,end, arr, target);
         if (arr.length - idx == target) return idx;
         else if (arr.length - idx < target) {
@@ -24,7 +31,7 @@ public class KLargest {
         }
     }
 
-    public int getIndex(int start, int end, int[] arr, int target) {
+    public static int getIndex(int start, int end, int[] arr, int target) {
         int left = 0;
         int right = end - 1;
         int pivot = arr[end];
@@ -39,6 +46,7 @@ public class KLargest {
                 right--;
             }
         }
-        return start;
+        mySorting.swap(arr, left,end);
+        return left;
     }
 }

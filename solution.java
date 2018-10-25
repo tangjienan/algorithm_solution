@@ -23,7 +23,7 @@ public class solution {
 //        TreeNode root = TreeNode.exampleTree();
 //        interative_tree_traversal.postOrder(root);
 
-        int[] arr = {2,3,2,1,3,1};
-        SwapSwap.SwapSwapSol2(arr);
+        int[] arr = {1,2,3,4,5,6,7,8};
+        System.out.println(KLargest.Klargest(arr,3));
     }
 }
