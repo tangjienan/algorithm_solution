@@ -8,7 +8,7 @@ public class myMap <K, V>  {
     *
     *  A table of buckets (an array of buckets) stroing each <key, value> pair
     *
-    *  bucket index is calculated by applying a hash function on the key and the size of the array
+    *  bucket index is calculated by applying a hash function on the hashcode of the key and the size of the array
     *
     *  e.g : Key -> HashValue -> Index
     *
@@ -168,7 +168,7 @@ public class myMap <K, V>  {
     private int hash(K key) {
         if (key == null) return 0;
         int code = key.hashCode();
-        return code & 0x7fffffff; // 32 bit binary value with all 1 except thw signed bit
+        return code & 0x7fffffff; // 32 bit binary value with all 1 except the signed bit
     }
 
     // calculate index of array based on hashcode of the key

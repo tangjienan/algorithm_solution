@@ -12,6 +12,7 @@ public class Unique_B_Tree_II {
 
     public List<TreeNode> UBT2 (int n ) {
         Map<String, List<TreeNode>> map = new HashMap<>();
+
         return helper(1, n, map);
     }
 
@@ -23,7 +24,7 @@ public class Unique_B_Tree_II {
         }
         String tmpName = start + "#" + end;
         if (map.containsKey(tmpName)) {
-            //System.out.println("prune");
+            System.out.println("prune" + start + " " + end);
             return map.get(tmpName);
         }
         if (start == end) {
