@@ -23,10 +23,7 @@ public class AllAnagrams {
         int count = map.keySet().size();
         int slow = 0;
         for (int i = 0; i < lo.length(); i++) {
-            // check count
-            if (count == 0 && i - slow  == sh.length()) {
-                res.add(slow);
-            }
+
             char c = lo.charAt(i);
             Integer curCount = map.get(c);
             // first append end point
@@ -47,6 +44,10 @@ public class AllAnagrams {
                     }
                 }
                 slow++;
+            }
+            // check count
+            if (count == 0 && i - slow + 1 == sh.length()) {
+                res.add(slow);
             }
         }
         return res;
