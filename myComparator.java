@@ -48,6 +48,17 @@ public class myComparator {
         MyClass c1 = new MyClass(10,"abcd");
 
 
+        PriorityQueue<MyClass> pq = new PriorityQueue<>((a,b) -> a.i1 - b.i1);
+
+        PriorityQueue<MyClass> pq2 = new PriorityQueue<>(new Comparator<MyClass>(){
+            @Override
+            public int compare(MyClass a1, MyClass a2) {
+                return a1.i1 - a2.i1;
+            }
+        });
+
+
+
         List<MyClass> list = new ArrayList<>();
         list.add(c1);
         list.add(c2);
