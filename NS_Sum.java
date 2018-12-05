@@ -23,6 +23,7 @@ public class NS_Sum {
         }
         if (curSum == target && curList.size() == N) {
             List<Integer> tmp = new LinkedList<>();
+            //List<Integer> newList = new ArrayList<>(oldList);
             for (Integer i: curList) {
                 tmp.add(i);
             }
