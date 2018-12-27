@@ -3,7 +3,7 @@ import java.util.NoSuchElementException;
 /**
  * Created by donezio on 9/26/18.
  */
-public class myHeap {
+public class myHeap  {
     /*
     * implementation of min-heap based on array, starting at index 0, all elements are unique
     * */
@@ -15,7 +15,7 @@ public class myHeap {
     int size;
 
     // initialization of min - heap with an array
-    public myHeap(int[] array) {
+    public myHeap(int[] array)  {
         if (array == null || array.length == 0) {
             throw new IllegalArgumentException("input array can not be null or empty");
         }
