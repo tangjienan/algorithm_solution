@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Vector;
 
 /**
  * Created by donezio on 1/29/19.
@@ -32,6 +33,7 @@ public class BinarySearchPractise {
         // when while loop exsite, we need to chekc left right right + 1
         if (arr[left] >= target) return left;
         if (arr[right] >= target) return right;
+        Vector<Integer> v  =  new Vector<>();
         return right + 1;
     }
 
