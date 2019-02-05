@@ -1,9 +1,6 @@
 package BasicCalculator;
 
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by donezio on 2/1/19.
@@ -13,9 +10,9 @@ public class questions {
         System.out.println(calculator1("1 + (2 - 6)"));
         System.out.println(calculator2("2 + 3 * 4"));
         System.out.println(calculator3("(2 + 3) * 4"));
-        List<String> res = addOps("105", 2);
-
-        res.forEach((a) -> System.out.println(a.substring(1)));
+        List<String> res = addOps("1050", 2);
+        String[] arr = res.stream().toArray(String[]:: new);
+        System.out.println(Arrays.toString(arr));
     }
 
     /*
