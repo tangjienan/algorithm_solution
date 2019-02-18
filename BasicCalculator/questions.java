@@ -9,24 +9,39 @@ import java.util.List;
  * Created by donezio on 2/1/19.
  */
 public class questions {
-    public static void main(String[] args) {
-        System.out.println(calculator1("1 + (2 - 6)"));
-        System.out.println(calculator2("2 + 3 * 4"));
-        System.out.println(calculator3("(2 + 3) * 4"));
-        List<String> res = addOps("105", 2);
 
-        res.forEach((a) -> System.out.println(a.substring(1)));
+    public static abstract class myAB {
+        public void foo () {
+            System.out.println("foo");
+        }
+    }
+
+
+    public static class Test extends myAB {
+
+    }
+
+    public static void main(String[] args) {
+//        System.out.println(calculator1("1 + (2 - 6)"));
+//        System.out.println(calculator2("2 + 3 * 4"));
+//        System.out.println(calculator3("(2 + 3) * 4"));
+//        List<String> res = addOps("105", 2);
+//
+//        res.forEach((a) -> System.out.println(a.substring(1)));
+
+
+
+        Test t1 = new Test();
+        t1.foo();
     }
 
     /*
         Only contains - + ( ), with arbitary spaces between them
         Eg: ( 2 +3 ) - (3 + 5)
-
         Algorithm : two stack, one for operator, one for operand
                     1. isDigit, using while to get Number, then push to number stack
                     2. ( push to operator stack
                     3. ) + -, process two stack, if ( ')' pop operarot) else push operator
-
      */
 
     public static int calculator1(String str) {
@@ -40,7 +55,7 @@ public class questions {
             if (Character.isDigit(c)) {
                 //int num = 0;
                 while (i < str.length() && Character.isDigit(str.charAt(i))) {
-                    num = num * 10 + (int)(c - '0');
+                    num = num * 10 + (int)(str.charAt(i) - '0');
                     i +=1;
                 }
                 numbers.offerFirst(num);
@@ -49,6 +64,7 @@ public class questions {
             else if (c == '(') {
                 opStack.offerFirst(c);
             } else {
+                // (3+4-1)
                 // computer previous result
                 while (opStack.size()!= 0 && opStack.peekFirst() != '(') {
                     int num1 = numbers.pollFirst();
@@ -60,7 +76,6 @@ public class questions {
                         numbers.offerFirst(num2 - num1);
                     }
                 }
-
                 if (c == ')') {
                     opStack.pollFirst();
                 } else {
@@ -142,7 +157,7 @@ public class questions {
             int num = 0;
             if (Character.isDigit(c)) {
                 while (i < str.length() && Character.isDigit(str.charAt(i))) {
-                    num = num * 10 + (int)(c - '0');
+                    num = num * 10 + (int)(str.charAt(i) - '0');
                     i +=1;
                 }
                 numbers.offerFirst(num);
@@ -202,7 +217,6 @@ public class questions {
                 numbers.offerFirst(num1 - num2);
             }
         }
-
         return numbers.peekFirst();
     }
 
